@@ -1,0 +1,29 @@
+using UnityEngine;
+
+public class EnemyMelee : EnemyBase
+{
+    public float attackRange = 2f;
+
+    void Update()
+    {
+        agent.SetDestination(player.position);
+
+        float distance = Vector3.Distance(transform.position, player.position);
+
+        if (distance <= attackRange && CanAttack())
+        {
+            Attack();
+        }
+    }
+
+    void Attack()
+    {
+        Health playerHealth = player.GetComponent<Health>();
+        if (playerHealth != null)
+        {
+            playerHealth.TakeDamage(damage);
+        }
+
+        ResetAttackTimer();
+    }
+}

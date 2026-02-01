@@ -27,7 +27,7 @@ public class Projectile : MonoBehaviour
 
         if (other.CompareTag("Enemy"))
         {
-            Health health = other.GetComponent<Health>();
+            EnemyHealth health = other.GetComponent<EnemyHealth>();
             Debug.Log("Enemy Health" + health.currentHealth);
             if (health != null)
             {

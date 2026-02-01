@@ -1912,7 +1912,7 @@ GameObject:
   - component: {fileID: 6882150646156904705}
   - component: {fileID: 6420931473619969469}
   - component: {fileID: 1228831349188939000}
-  - component: {fileID: 9008063970476524516}
+  - component: {fileID: -6467912914865680627}
   m_Layer: 3
   m_Name: Enemy_Ranged
   m_TagString: Enemy
@@ -2023,7 +2023,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 8346340089355564446, guid: 8bbab169ac83c134faf8a87fbd6bdeb9, type: 3}
   firePoint: {fileID: 7684050878940410869}
   attackRange: 10
---- !u!114 &9008063970476524516
+--- !u!114 &-6467912914865680627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2032,7 +2032,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2631420172492299507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ab222acccf91e94d9e46fb217995c72, type: 3}
+  m_Script: {fileID: 11500000, guid: 4836784b9c4c2074eb456cf0637ce3db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100

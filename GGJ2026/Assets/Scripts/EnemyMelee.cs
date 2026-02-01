@@ -18,7 +18,7 @@ public class EnemyMelee : EnemyBase
 
     void Attack()
     {
-        Health playerHealth = player.GetComponent<Health>();
+        PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
         if (playerHealth != null)
         {
             playerHealth.TakeDamage(damage);

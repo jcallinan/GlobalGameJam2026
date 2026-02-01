@@ -15,7 +15,7 @@ public class PunchAttack : Ability
 
         if (Physics.Raycast(origin, direction, out hit, range, hitLayers))
         {
-            Health health = hit.collider.GetComponent<Health>();
+            EnemyHealth health = hit.collider.GetComponent<EnemyHealth>();
             if (health != null)
             {
                 health.TakeDamage(damage);

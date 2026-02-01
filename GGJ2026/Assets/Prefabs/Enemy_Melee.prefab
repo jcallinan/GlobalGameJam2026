@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 3780217902926989654}
   - component: {fileID: 5702303184261189638}
   - component: {fileID: 4018479150019050856}
-  - component: {fileID: 6376548692400689641}
+  - component: {fileID: -7926294422362462051}
   m_Layer: 3
   m_Name: Enemy_Melee
   m_TagString: Enemy
@@ -648,7 +648,7 @@ MonoBehaviour:
   damage: 10
   attackCooldown: 1.5
   attackRange: 2
---- !u!114 &6376548692400689641
+--- !u!114 &-7926294422362462051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -657,7 +657,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 572190096549951222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ab222acccf91e94d9e46fb217995c72, type: 3}
+  m_Script: {fileID: 11500000, guid: 4836784b9c4c2074eb456cf0637ce3db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100

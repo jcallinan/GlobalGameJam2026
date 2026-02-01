@@ -7,7 +7,7 @@ public class StartScreen : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("SampleScene");
     }
     public void QuitGame()
     {

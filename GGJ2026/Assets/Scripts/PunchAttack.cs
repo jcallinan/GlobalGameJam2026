@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+
 
 public class PunchAttack : Ability
 {
@@ -6,6 +8,12 @@ public class PunchAttack : Ability
     public float range = 2f;
     public LayerMask hitLayers;
 
+    Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     public override void Activate()
     {
         RaycastHit hit;
@@ -19,7 +27,15 @@ public class PunchAttack : Ability
             if (health != null)
             {
                 health.TakeDamage(damage);
+                animator.SetBool("IsPunching", true);
+                StartCoroutine(WaitForSeconds());
             }
         }
+    }
+    IEnumerator WaitForSeconds()
+    {
+        yield return new WaitForSeconds(1f);
+
+        animator.SetBool("IsPunching", false);
     }
 }

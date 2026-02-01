@@ -1,5 +1,7 @@
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(Animator))]
 public class TPlayerController : MonoBehaviour
 {
     [Header("Movement")]
@@ -11,19 +13,25 @@ public class TPlayerController : MonoBehaviour
     [Header("Camera")]
     public Transform cameraTransform;
 
-    private CharacterController controller;
-    private Vector3 velocity;
-    private bool isGrounded;
+    CharacterController controller;
+    Animator animator;
+
+    Vector3 velocity;
+    bool isGrounded;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
+
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
     {
         isGrounded = controller.isGrounded;
+        animator.SetBool("Grounded", isGrounded);
 
         if (isGrounded && velocity.y < 0)
             velocity.y = -2f;
@@ -33,6 +41,7 @@ public class TPlayerController : MonoBehaviour
 
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
+        // -------- MOVEMENT --------
         if (direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg
@@ -50,13 +59,18 @@ public class TPlayerController : MonoBehaviour
             controller.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
         }
 
-        // Jump
+        // -------- ANIMATION SPEED --------
+        float animationSpeed = direction.magnitude;
+        animator.SetFloat("Speed", animationSpeed, 0.1f, Time.deltaTime);
+
+        // -------- JUMP --------
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            animator.SetTrigger("Jump");
         }
 
-        // Gravity
+        // -------- GRAVITY --------
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }

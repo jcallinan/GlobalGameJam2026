@@ -7,7 +7,11 @@ public class StartScreen : MonoBehaviour
 {
     public void StartGame()
     {
+<<<<<<< Updated upstream
         SceneManager.LoadScene(1);
+=======
+        SceneManager.LoadScene("LoadingScreen");
+>>>>>>> Stashed changes
     }
     public void QuitGame()
     {

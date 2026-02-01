@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class Health : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        SceneManager.LoadScene("GameOverScreen");
     }
 }

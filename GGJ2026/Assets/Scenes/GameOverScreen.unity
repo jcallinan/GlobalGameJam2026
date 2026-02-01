@@ -183,12 +183,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11199218}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1606577556}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &196348490
 GameObject:
@@ -250,8 +250,7 @@ MonoBehaviour:
   m_text: GAME OVER
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5876bebc177f0994e8a2a440901f07b5, type: 2}
-  m_sharedMaterial: {fileID: 2160157766836195851, guid: 5876bebc177f0994e8a2a440901f07b5,
-    type: 2}
+  m_sharedMaterial: {fileID: 2160157766836195851, guid: 5876bebc177f0994e8a2a440901f07b5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -477,8 +476,7 @@ MonoBehaviour:
   m_text: Try Again
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5876bebc177f0994e8a2a440901f07b5, type: 2}
-  m_sharedMaterial: {fileID: 2160157766836195851, guid: 5876bebc177f0994e8a2a440901f07b5,
-    type: 2}
+  m_sharedMaterial: {fileID: 2160157766836195851, guid: 5876bebc177f0994e8a2a440901f07b5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1535,8 +1533,7 @@ MonoBehaviour:
   m_text: Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5876bebc177f0994e8a2a440901f07b5, type: 2}
-  m_sharedMaterial: {fileID: 2160157766836195851, guid: 5876bebc177f0994e8a2a440901f07b5,
-    type: 2}
+  m_sharedMaterial: {fileID: 2160157766836195851, guid: 5876bebc177f0994e8a2a440901f07b5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1705,6 +1702,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1156204429}
+  - {fileID: 11199221}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2120,4 +2118,3 @@ SceneRoots:
   - {fileID: 963194228}
   - {fileID: 705507995}
   - {fileID: 1606577556}
-  - {fileID: 11199221}

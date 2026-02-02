@@ -3,12 +3,13 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float speed = 15f;
-    public float damage = 10f;
+    public float damage = 100f;
     public float lifetime = 5f;
 
     void Start()
     {
         Destroy(gameObject, lifetime);
+
     }
 
     void Update()

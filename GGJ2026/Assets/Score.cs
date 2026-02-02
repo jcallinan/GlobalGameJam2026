@@ -25,7 +25,7 @@ public class Score : MonoBehaviour
     {
         while (true)
         {
-            score += 5;
+            score += 1;
             yield return new WaitForSeconds(1);
         }
         

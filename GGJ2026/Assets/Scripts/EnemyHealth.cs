@@ -4,14 +4,14 @@ using UnityEngine.SceneManagement;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public float maxHealth = 100f;
+    public float maxHealth = 10f;
     public float currentHealth;
     public Score score;
     int addScore = 25;
 
     void Start()
     {
-        
+        currentHealth = maxHealth;
     }
 
     public void TakeDamage(float amount)

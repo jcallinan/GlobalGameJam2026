@@ -3,7 +3,7 @@ using UnityEngine.AI;
 
 public abstract class EnemyBase : MonoBehaviour
 {
-    public float health = 100f;
+    public float health = 500f;
     public float damage = 10f;
     public float attackCooldown = 1.5f;
 

@@ -96,7 +96,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 56a282689910f1f41b6abf2d9844519a, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -1388,6 +1388,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2571118854743697038, guid: ed70d332584a7684ea98bdc4a7c324cc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2f7de099bebc8eb41a83e747af0f9531, type: 2}
+    - target: {fileID: -2571118854743697038, guid: ed70d332584a7684ea98bdc4a7c324cc, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1cc7f424d0f109d45bf35fa50c9c4dbc, type: 2}
     - target: {fileID: 919132149155446097, guid: ed70d332584a7684ea98bdc4a7c324cc, type: 3}
       propertyPath: m_Name
       value: Coral_Reef_w_grass1

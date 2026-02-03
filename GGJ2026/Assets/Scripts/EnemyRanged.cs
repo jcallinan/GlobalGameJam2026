@@ -33,11 +33,11 @@ public class EnemyRanged : EnemyBase
 
     void Shoot()
     {
-        Vector3 dir = (player.position - firePoint.position).normalized;
-        Quaternion rot = Quaternion.LookRotation(dir);
+         Vector3 dir = (player.position - firePoint.position).normalized;
+    Quaternion rot = Quaternion.LookRotation(dir);
 
-        Instantiate(projectilePrefab, firePoint.position, rot);
-        ResetAttackTimer();
+    Instantiate(projectilePrefab, firePoint.position, rot);
+    ResetAttackTimer();
         ///Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         ///ResetAttackTimer();
     }

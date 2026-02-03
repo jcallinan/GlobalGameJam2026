@@ -6,17 +6,38 @@ public class EnemyRanged : EnemyBase
     public Transform firePoint;
     public float attackRange = 10f;
 
+    PlayerStealth playerStealth;
+
     void Update()
     {
+        if (playerStealth == null && player != null)
+            playerStealth = player.GetComponent<PlayerStealth>();
+
+        if (playerStealth != null && playerStealth.hiddenInGrass)
+        {
+            agent.ResetPath();
+            return;
+        }
+
+
+
+
+
+
         float distance = Vector3.Distance(transform.position, player.position);
 
         if (distance > attackRange)
         {
             agent.SetDestination(player.position);
+
+  
+
         }
         else
         {
             agent.ResetPath();
+
+
 
             transform.LookAt(new Vector3(
                 player.position.x,

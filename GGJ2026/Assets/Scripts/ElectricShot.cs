@@ -20,6 +20,17 @@ public class ElectricShot : Ability
 
     public override void Activate()
     {
+        var stealth = GameObject.FindGameObjectWithTag("Player")
+    .GetComponent<PlayerStealth>();
+
+        if (stealth != null)
+            stealth.RevealTemporarily();
+
+
+
+
+
+
         Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
        animator.SetBool("IsAttacking", true);
         StartCoroutine(WaitForSeconds());

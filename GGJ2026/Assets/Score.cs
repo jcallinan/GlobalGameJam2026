@@ -25,9 +25,29 @@ public class Score : MonoBehaviour
     {
         while (true)
         {
+            var stealth = GameObject.FindGameObjectWithTag("Player")
+    .GetComponent<PlayerStealth>();
+
+        if (stealth == null || stealth.CanScore())
+        {
             score += 1;
+        }
+            
             yield return new WaitForSeconds(1);
         }
+        //
         
+
+    //
+}
+    public void SaveBestScore()
+    {
+        int bestScore = PlayerPrefs.GetInt("BestScore", 0);
+
+        if (score > bestScore)
+        {
+            PlayerPrefs.SetInt("BestScore", score);
+            PlayerPrefs.Save();
+        }
     }
 }

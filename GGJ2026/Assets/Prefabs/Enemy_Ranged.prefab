@@ -2018,7 +2018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  damage: 10
+  damage: 5
   attackCooldown: 2
   projectilePrefab: {fileID: 8346340089355564446, guid: 8bbab169ac83c134faf8a87fbd6bdeb9, type: 3}
   firePoint: {fileID: 7684050878940410869}

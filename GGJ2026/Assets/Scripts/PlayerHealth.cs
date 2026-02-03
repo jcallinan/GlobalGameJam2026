@@ -27,6 +27,9 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         //Destroy(gameObject);
+        //FindObjectOfType<Score>()?.SaveBestScore();
+        //SceneManager.LoadScene("GameOverScreen");
+        FindObjectOfType<Score>()?.SaveBestScore();
         SceneManager.LoadScene("GameOverScreen");
     }
 }

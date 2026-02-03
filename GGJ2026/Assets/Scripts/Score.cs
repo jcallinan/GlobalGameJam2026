@@ -40,14 +40,32 @@ public class Score : MonoBehaviour
 
     //
 }
+    //public void SaveBestScore()
+    //{
+    //    int bestScore = PlayerPrefs.GetInt("BestScore", 0);
+
+    //    if (score > bestScore)
+    //    {
+    //        PlayerPrefs.SetInt("BestScore", score);
+    //        PlayerPrefs.Save();
+    //    }
+    //}
+
     public void SaveBestScore()
     {
         int bestScore = PlayerPrefs.GetInt("BestScore", 0);
+        Debug.Log($"[SaveBestScore] current={score} best(before)={bestScore}");
+
+        PlayerPrefs.SetInt("LastScore", score); // optional but handy
 
         if (score > bestScore)
         {
             PlayerPrefs.SetInt("BestScore", score);
             PlayerPrefs.Save();
+           
+        }
+        else
+        {
         }
     }
 }

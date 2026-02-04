@@ -6,17 +6,38 @@ public class EnemyRanged : EnemyBase
     public Transform firePoint;
     public float attackRange = 10f;
 
+    PlayerStealth playerStealth;
+
     void Update()
     {
+        if (playerStealth == null && player != null)
+            playerStealth = player.GetComponent<PlayerStealth>();
+
+        if (playerStealth != null && playerStealth.hiddenInGrass)
+        {
+            agent.ResetPath();
+            return;
+        }
+
+
+
+
+
+
         float distance = Vector3.Distance(transform.position, player.position);
 
         if (distance > attackRange)
         {
             agent.SetDestination(player.position);
+
+  
+
         }
         else
         {
             agent.ResetPath();
+
+
 
             transform.LookAt(new Vector3(
                 player.position.x,
@@ -33,7 +54,12 @@ public class EnemyRanged : EnemyBase
 
     void Shoot()
     {
-        Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-        ResetAttackTimer();
+         Vector3 dir = (player.position - firePoint.position).normalized;
+    Quaternion rot = Quaternion.LookRotation(dir);
+
+    Instantiate(projectilePrefab, firePoint.position, rot);
+    ResetAttackTimer();
+        ///Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+        ///ResetAttackTimer();
     }
 }

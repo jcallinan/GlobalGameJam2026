@@ -2018,7 +2018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  damage: 10
+  damage: 5
   attackCooldown: 2
   projectilePrefab: {fileID: 8346340089355564446, guid: 8bbab169ac83c134faf8a87fbd6bdeb9, type: 3}
   firePoint: {fileID: 7684050878940410869}
@@ -2035,8 +2035,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4836784b9c4c2074eb456cf0637ce3db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 30
   currentHealth: 0
+  score: {fileID: 0}
 --- !u!1 &2676337942026301059
 GameObject:
   m_ObjectHideFlags: 0
